@@ -1,0 +1,27 @@
+def median(data):
+    index = int(len(data) // 2)
+    if int(len(data)) % 2 != 0:
+        return data[int(len(data)/2)]
+    else:
+        return ((data[index - 1] + data[index])/2)
+
+
+n = int(input())
+elements = list(map(int, input().split()))
+elements_1 = sorted(elements)
+q2 = median(elements_1)
+
+#Find quartriles
+if n % 2 == 0:
+    lower = elements_1[0 : int(len(elements_1) // 2)]
+    upper = elements_1[int(len(elements_1) // 2): n]
+
+else:
+    lower = elements_1[0 : int((len(elements_1)/2))]
+    upper = elements_1[int(len(elements_1)/2)+1: n]
+
+q1= median(lower)
+q3 = median(upper)
+print(int(q1))
+print(int(q2))
+print(int(q3))
