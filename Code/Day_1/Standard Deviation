@@ -1,0 +1,16 @@
+import math
+n = int(input())
+x = list(map(int, input().split()))
+sum = 0
+for i in range(len(x)):
+    sum += x[i]
+mean = sum/n
+
+num = []
+num_sum = 0
+for i in range(len(x)):
+    num.append(math.pow((x[i] - mean), 2))
+    num_sum += num[i]
+    
+sd = math.sqrt(num_sum/len(num))
+print(round(sd, 1))
