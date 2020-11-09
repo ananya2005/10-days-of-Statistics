@@ -1,0 +1,10 @@
+def binomial(r, n, p):
+   return (math.factorial(n) * math.pow(p, r) * math.pow(1.0-p, n-r)/(math.factorial(r) *    math.factorial(n-r)))
+
+x = list(map(float, input().split()))
+p = x[0]/100
+
+a = binomial(2, 10, p) + binomial(1, 10, p) + binomial(0, 10, p)
+b = (1 - a) + binomial(2, 10, p)
+print(round(a, 3))
+print(round(b, 3))
