@@ -1,0 +1,14 @@
+import math
+def gd(n, p):
+    return (math.pow((1.0 - p), (n-1)) * p)
+
+x = list(map(int, input().split()))
+n = int(input())
+p = x[0]/x[1]
+
+answer = 0
+for i in range(n+1):
+    if (i>0):
+        answer = answer + gd(i, p)
+    
+print(round(answer, 3))
