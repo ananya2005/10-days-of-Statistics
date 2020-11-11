@@ -1,0 +1,5 @@
+# A bag contains 3 red marbles and 4 blue marbles. The, 2 marbles are drawn from the bag, at random,
+# without replacement. If the first marble is red, what is the probabilty that the second marble is blue?
+
+result = 2/3
+print(result)
